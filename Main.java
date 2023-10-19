@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        Peluche Peluche = new Peluche(19.50,"Disney","Peluche di cenerentola",30);
+        /*Peluche Peluche = new Peluche(19.50,"Disney","Peluche di cenerentola",30);
         System.out.println("\n"+Peluche.gioca());
         Peluche.descrizioneStatic();
 
@@ -11,7 +11,11 @@ public class Main {
 
         GiochiDiTavolo giochiDiTavolo = new GiochiDiTavolo(20,"Monopoly","Gioco classico monopoly","10-99",5);
         System.out.println("\n" + giochiDiTavolo.gioca());
-        giochiDiTavolo.descrizioneStatic();
+        giochiDiTavolo.descrizioneStatic();*/
+
+        GiocattoliFactory nuovo = new GiocattoliFactoryImp();
+        nuovo.creaGiocattoloElettrico(6);
+
 
 
     }

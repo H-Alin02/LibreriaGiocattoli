@@ -1,3 +1,3 @@
-public interface GiocattoloMeccanico extends Giocattolo{
+public interface GiocattoloMeccanico {
     void descrizioneMeccanico();
 }

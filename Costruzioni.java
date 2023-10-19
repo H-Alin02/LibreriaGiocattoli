@@ -20,10 +20,7 @@ public class Costruzioni implements GiocattoloStatico{
                 '}';
     }
 
-    @Override
-    public String gioca() {
-        return "Stai giocando con le costruzioni";
-    }
+
 
     @Override
     public void descrizioneStatic() {

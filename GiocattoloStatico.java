@@ -1,3 +1,3 @@
-public interface GiocattoloStatico extends Giocattolo{
+public interface GiocattoloStatico {
     void descrizioneStatic();
 }

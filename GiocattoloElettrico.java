@@ -1,3 +1,3 @@
-public interface GiocattoloElettrico extends Giocattolo{
+public interface GiocattoloElettrico {
     void utilizzaPile();
 }
