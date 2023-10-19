@@ -22,11 +22,11 @@ public class Costruzioni implements GiocattoloStatico{
 
     @Override
     public String gioca() {
-        return null;
+        return "Stai giocando con le costruzioni";
     }
 
     @Override
     public void descrizioneStatic() {
-
+        System.out.println("Stai giocando con un giocattolo statico !!");
     }
 }

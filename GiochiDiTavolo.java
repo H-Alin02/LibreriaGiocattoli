@@ -24,11 +24,11 @@ public class GiochiDiTavolo implements GiocattoloStatico{
 
     @Override
     public String gioca() {
-        return null;
+        return "Stai giocando con un gioco da tavolo !! ";
     }
 
     @Override
     public void descrizioneStatic() {
-
+        System.out.println("Stai giocando con un giocattolo statico !!");
     }
 }
