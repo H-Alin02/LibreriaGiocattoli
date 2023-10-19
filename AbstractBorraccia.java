@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public class AbstractBorraccia {
+public interface AbstractBorraccia {
+    void bevi();
 }

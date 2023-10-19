@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public interface AbstractPortaMerenda {
+public interface AbstractPortaMerenda {
+    void apriPortaMerenda();
 }

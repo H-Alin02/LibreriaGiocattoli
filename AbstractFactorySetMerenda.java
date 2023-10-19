@@ -1,2 +1,6 @@
-package PACKAGE_NAME;public interface AbstractFactorySetMerenda {
+public interface AbstractFactorySetMerenda {
+    AbstractPosatine setPosatine();
+    AbstractPortaMerenda setPortaMerenda();
+    AbstractTovaglietta setTovaglietta();
+    AbstractBorraccia setBorraccia();
 }
