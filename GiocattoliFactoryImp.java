@@ -6,12 +6,10 @@ public class GiocattoliFactoryImp implements GiocattoliFactory{
     String marca, descrizione, etaConsigliata;
     double prezzo, altezza;
     int numeroPezzi, numeroGiocatori;
+
     @Override
-    public Giocattolo creaGiocattolo(String s) {
-        if(s == null){
-            return null;
-        }
-        if( s.equalsIgnoreCase("macchinina frizione")){
+    public GiocattoloMeccanico creaGiocattoloMeccanico(int s) {
+        if( s == 1){
             System.out.println("Inserisci il prezzo : ");
             prezzo = Double.parseDouble(in.nextLine());
             System.out.println("Inserisci la marca : ");
@@ -21,7 +19,7 @@ public class GiocattoliFactoryImp implements GiocattoliFactory{
 
 
             return new MacchininaFrizione(prezzo,marca,descrizione);
-        }else if( s.equalsIgnoreCase("pupazzo snodabile")) {
+        }else if( s == 2) {
             System.out.println("Inserisci il prezzo : ");
             prezzo = Double.parseDouble(in.nextLine());
             System.out.println("Inserisci la marca : ");
@@ -30,60 +28,69 @@ public class GiocattoliFactoryImp implements GiocattoliFactory{
             descrizione = in.nextLine();
 
             return new PupazzoSnodabile(prezzo,marca,descrizione);
-        } else if( s.equalsIgnoreCase("macchina telecomandata")) {
-            System.out.println("Inserisci il prezzo : ");
-            prezzo = Double.parseDouble(in.nextLine());
-            System.out.println("Inserisci la marca : ");
-            marca = in.nextLine();
-            System.out.println("Inserisci la descrizione : ");
-            descrizione = in.nextLine();
+        }else return null;
+    }
 
-            return new MacchininaTelecomandata(prezzo,marca,descrizione);
-        }else if( s.equalsIgnoreCase("robot")) {
-            System.out.println("Inserisci il prezzo : ");
-            prezzo = Double.parseDouble(in.nextLine());
-            System.out.println("Inserisci la marca : ");
-            marca = in.nextLine();
-            System.out.println("Inserisci la descrizione : ");
-            descrizione = in.nextLine();
+    @Override
+    public GiocattoloStatico creaGiocattoloStatico(int k) {
+        if( k == 3) {
+        System.out.println("Inserisci il prezzo : ");
+        prezzo = Double.parseDouble(in.nextLine());
+        System.out.println("Inserisci la marca : ");
+        marca = in.nextLine();
+        System.out.println("Inserisci la descrizione : ");
+        descrizione = in.nextLine();
 
-            return new Robot(prezzo,marca,descrizione);
-        }else if( s.equalsIgnoreCase("costruzioni")) {
-            System.out.println("Inserisci il prezzo : ");
-            prezzo = Double.parseDouble(in.nextLine());
-            System.out.println("Inserisci la marca : ");
-            marca = in.nextLine();
-            System.out.println("Inserisci la descrizione : ");
-            descrizione = in.nextLine();
-            System.out.println("Inserisci il numero di pezzi : ");
-            numeroPezzi = Integer.parseInt(in.nextLine());
+        return (GiocattoloStatico) new MacchininaTelecomandata(prezzo,marca,descrizione);
+        }else if( k == 4) {
+        System.out.println("Inserisci il prezzo : ");
+        prezzo = Double.parseDouble(in.nextLine());
+        System.out.println("Inserisci la marca : ");
+        marca = in.nextLine();
+        System.out.println("Inserisci la descrizione : ");
+        descrizione = in.nextLine();
 
-            return new Costruzioni(prezzo,marca,descrizione,numeroPezzi);
-        }else if( s.equalsIgnoreCase("peluche")) {
-            System.out.println("Inserisci il prezzo : ");
-            prezzo = Double.parseDouble(in.nextLine());
-            System.out.println("Inserisci la marca : ");
-            marca = in.nextLine();
-            System.out.println("Inserisci la descrizione : ");
-            descrizione = in.nextLine();
-            System.out.println("Inserisci l'altezza : ");
-            altezza = Double.parseDouble(in.nextLine());
+        return (GiocattoloStatico) new Robot(prezzo,marca,descrizione);
+        }else return null;
+    }
 
-            return new Peluche(prezzo,marca,descrizione,altezza);
-        }else if( s.equalsIgnoreCase("giochi di tavolo")) {
-            System.out.println("Inserisci il prezzo : ");
-            prezzo = Double.parseDouble(in.nextLine());
-            System.out.println("Inserisci la marca : ");
-            marca = in.nextLine();
-            System.out.println("Inserisci la descrizione : ");
-            descrizione = in.nextLine();
-            System.out.println("l'eta consigliata : ");
-            etaConsigliata = in.nextLine();
-            System.out.println("Inserisci il numero di giocatori : ");
-            numeroGiocatori = Integer.parseInt(in.nextLine());
+    @Override
+    public GiocattoloElettrico creaGiocattoloElettrico(int p){
+        if( p == 4) {
+        System.out.println("Inserisci il prezzo : ");
+        prezzo = Double.parseDouble(in.nextLine());
+        System.out.println("Inserisci la marca : ");
+        marca = in.nextLine();
+        System.out.println("Inserisci la descrizione : ");
+        descrizione = in.nextLine();
+        System.out.println("Inserisci il numero di pezzi : ");
+        numeroPezzi = Integer.parseInt(in.nextLine());
 
-            return new GiochiDiTavolo(prezzo,marca,descrizione,etaConsigliata,numeroGiocatori);
-        }
-        else return null;
+        return (GiocattoloElettrico) new Costruzioni(prezzo,marca,descrizione,numeroPezzi);
+        }else if( p == 5) {
+        System.out.println("Inserisci il prezzo : ");
+        prezzo = Double.parseDouble(in.nextLine());
+        System.out.println("Inserisci la marca : ");
+        marca = in.nextLine();
+        System.out.println("Inserisci la descrizione : ");
+        descrizione = in.nextLine();
+        System.out.println("Inserisci l'altezza : ");
+        altezza = Double.parseDouble(in.nextLine());
+
+        return (GiocattoloElettrico) new Peluche(prezzo,marca,descrizione,altezza);
+        }else if( p == 6) {
+        System.out.println("Inserisci il prezzo : ");
+        prezzo = Double.parseDouble(in.nextLine());
+        System.out.println("Inserisci la marca : ");
+        marca = in.nextLine();
+        System.out.println("Inserisci la descrizione : ");
+        descrizione = in.nextLine();
+        System.out.println("l'eta consigliata : ");
+        etaConsigliata = in.nextLine();
+        System.out.println("Inserisci il numero di giocatori : ");
+        numeroGiocatori = Integer.parseInt(in.nextLine());
+
+        return (GiocattoloElettrico) new GiochiDiTavolo(prezzo,marca,descrizione,etaConsigliata,numeroGiocatori);
+        }else return null;
     }
 }

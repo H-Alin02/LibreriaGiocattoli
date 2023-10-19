@@ -18,10 +18,7 @@ public class MacchininaTelecomandata implements GiocattoloElettrico{
                 '}';
     }
 
-    @Override
-    public String gioca() {
-        return null;
-    }
+
 
     @Override
     public void utilizzaPile() {

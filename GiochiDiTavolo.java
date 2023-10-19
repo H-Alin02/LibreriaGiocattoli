@@ -22,10 +22,7 @@ public class GiochiDiTavolo implements GiocattoloStatico{
                 '}';
     }
 
-    @Override
-    public String gioca() {
-        return "Stai giocando con un gioco da tavolo !! ";
-    }
+
 
     @Override
     public void descrizioneStatic() {

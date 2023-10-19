@@ -20,10 +20,7 @@ public class Peluche implements GiocattoloStatico{
                 '}';
     }
 
-    @Override
-    public String gioca() {
-         return "Stai giocando con un peluche";
-    }
+
 
     @Override
     public void descrizioneStatic() {

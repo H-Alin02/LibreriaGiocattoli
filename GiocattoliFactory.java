@@ -1,3 +1,5 @@
 public interface GiocattoliFactory {
-    Giocattolo creaGiocattolo(String s);
+    GiocattoloMeccanico creaGiocattoloMeccanico(int s);
+    GiocattoloStatico creaGiocattoloStatico(int k);
+    GiocattoloElettrico creaGiocattoloElettrico(int p);
 }

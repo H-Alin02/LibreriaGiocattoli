@@ -18,10 +18,7 @@ public class MacchininaFrizione implements GiocattoloMeccanico{
                 '}';
     }
 
-    @Override
-    public String gioca() {
-        return null;
-    }
+
 
     @Override
     public void descrizioneMeccanico() {
