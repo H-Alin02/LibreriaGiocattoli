@@ -1,3 +1,4 @@
-public class LegoStore {
-
+public interface LegoStore {
+    String assemblaLego();
+    void descizioneLego();
 }
