@@ -1,4 +1,3 @@
-import java.awt.*;
 import java.util.Scanner;
 
 public class GiocattoliFactoryImp implements GiocattoliFactory{
@@ -32,8 +31,8 @@ public class GiocattoliFactoryImp implements GiocattoliFactory{
     }
 
     @Override
-    public GiocattoloStatico creaGiocattoloStatico(int k) {
-        if( k == 3) {
+    public GiocattoloElettrico creaGiocattoloElettrico(int k) {
+        if( k == 1) {
         System.out.println("Inserisci il prezzo : ");
         prezzo = Double.parseDouble(in.nextLine());
         System.out.println("Inserisci la marca : ");
@@ -41,8 +40,8 @@ public class GiocattoliFactoryImp implements GiocattoliFactory{
         System.out.println("Inserisci la descrizione : ");
         descrizione = in.nextLine();
 
-        return (GiocattoloStatico) new MacchininaTelecomandata(prezzo,marca,descrizione);
-        }else if( k == 4) {
+        return new MacchininaTelecomandata(prezzo,marca,descrizione);
+        }else if( k == 2) {
         System.out.println("Inserisci il prezzo : ");
         prezzo = Double.parseDouble(in.nextLine());
         System.out.println("Inserisci la marca : ");
@@ -50,13 +49,13 @@ public class GiocattoliFactoryImp implements GiocattoliFactory{
         System.out.println("Inserisci la descrizione : ");
         descrizione = in.nextLine();
 
-        return (GiocattoloStatico) new Robot(prezzo,marca,descrizione);
+        return new Robot(prezzo,marca,descrizione);
         }else return null;
     }
 
     @Override
-    public GiocattoloElettrico creaGiocattoloElettrico(int p){
-        if( p == 4) {
+    public GiocattoloStatico creaGiocattoloStatico(int p){
+        if( p == 1) {
         System.out.println("Inserisci il prezzo : ");
         prezzo = Double.parseDouble(in.nextLine());
         System.out.println("Inserisci la marca : ");
@@ -66,8 +65,8 @@ public class GiocattoliFactoryImp implements GiocattoliFactory{
         System.out.println("Inserisci il numero di pezzi : ");
         numeroPezzi = Integer.parseInt(in.nextLine());
 
-        return (GiocattoloElettrico) new Costruzioni(prezzo,marca,descrizione,numeroPezzi);
-        }else if( p == 5) {
+        return new Costruzioni(prezzo,marca,descrizione,numeroPezzi);
+        }else if( p == 2) {
         System.out.println("Inserisci il prezzo : ");
         prezzo = Double.parseDouble(in.nextLine());
         System.out.println("Inserisci la marca : ");
@@ -77,8 +76,8 @@ public class GiocattoliFactoryImp implements GiocattoliFactory{
         System.out.println("Inserisci l'altezza : ");
         altezza = Double.parseDouble(in.nextLine());
 
-        return (GiocattoloElettrico) new Peluche(prezzo,marca,descrizione,altezza);
-        }else if( p == 6) {
+        return new Peluche(prezzo,marca,descrizione,altezza);
+        }else if( p == 3) {
         System.out.println("Inserisci il prezzo : ");
         prezzo = Double.parseDouble(in.nextLine());
         System.out.println("Inserisci la marca : ");
@@ -90,7 +89,7 @@ public class GiocattoliFactoryImp implements GiocattoliFactory{
         System.out.println("Inserisci il numero di giocatori : ");
         numeroGiocatori = Integer.parseInt(in.nextLine());
 
-        return (GiocattoloElettrico) new GiochiDiTavolo(prezzo,marca,descrizione,etaConsigliata,numeroGiocatori);
+        return new GiochiDiTavolo(prezzo,marca,descrizione,etaConsigliata,numeroGiocatori);
         }else return null;
     }
 }
