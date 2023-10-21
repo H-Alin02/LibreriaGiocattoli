@@ -23,7 +23,6 @@ public class Costruzioni implements GiocattoloStatico , Serializable {
     }
 
 
-
     @Override
     public void descrizioneStatic() {
         System.out.println("Stai giocando con un giocattolo statico !!");

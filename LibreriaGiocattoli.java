@@ -57,7 +57,8 @@ public class LibreriaGiocattoli {
                             Scegli che giocattolo Meccanico vuoi inserire :
                             [1] Aggiungi delle costruzioni
                             [2] Aggiungi un Peluche
-                            [3] Aggiungi un Gioco da Tavolo""");
+                            [3] Aggiungi un Gioco da Tavolo
+                            [4] Aggiungi un Giocattolo LEGO""");
                     choice = Integer.parseInt(in.nextLine());
                     if (choice == 1){
                         giocattoloStatico = factory.creaGiocattoloStatico(1);
@@ -71,6 +72,11 @@ public class LibreriaGiocattoli {
                     }
                     if (choice == 3){
                         giocattoloStatico = factory.creaGiocattoloStatico(3);
+                        ListaGiocattoliStatici.add(giocattoloStatico);
+                        putDataStatici();
+                    }
+                    if(choice == 4){
+                        giocattoloStatico = factory.creaGiocattoloStatico(4);
                         ListaGiocattoliStatici.add(giocattoloStatico);
                         putDataStatici();
                     }

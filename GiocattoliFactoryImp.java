@@ -90,6 +90,14 @@ public class GiocattoliFactoryImp implements GiocattoliFactory{
         numeroGiocatori = Integer.parseInt(in.nextLine());
 
         return new GiochiDiTavolo(prezzo,marca,descrizione,etaConsigliata,numeroGiocatori);
+        }else if( p == 4 ){
+            System.out.println("Inserisci il prezzo : ");
+            prezzo = Double.parseDouble(in.nextLine());
+            System.out.println("Inserisci la descrizione : ");
+            descrizione = in.nextLine();
+            System.out.println("Inserisci il numero di pezzi : ");
+            numeroPezzi = Integer.parseInt(in.nextLine());
+            return new LegoAdapter(prezzo,"Lego",descrizione,numeroPezzi);
         }else return null;
     }
 }
