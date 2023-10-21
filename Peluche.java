@@ -1,4 +1,6 @@
-public class Peluche implements GiocattoloStatico{
+import java.io.Serializable;
+
+public class Peluche implements GiocattoloStatico , Serializable {
     double prezzo;
     double altezza;
     String marca, descrizione;

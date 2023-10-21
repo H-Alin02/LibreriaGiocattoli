@@ -1,4 +1,6 @@
-public class Costruzioni implements GiocattoloStatico{
+import java.io.Serializable;
+
+public class Costruzioni implements GiocattoloStatico , Serializable {
     int numeroPezzi;
     String marca, descrizione;
     double prezzo;

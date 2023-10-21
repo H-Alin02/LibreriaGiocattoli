@@ -1,4 +1,6 @@
-public class MacchininaTelecomandata implements GiocattoloElettrico{
+import java.io.Serializable;
+
+public class MacchininaTelecomandata implements GiocattoloElettrico , Serializable {
     double prezzo;
     String marca;
     String descrizione;

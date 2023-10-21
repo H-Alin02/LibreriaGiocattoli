@@ -1,4 +1,6 @@
-public class MacchininaFrizione implements GiocattoloMeccanico{
+import java.io.Serializable;
+
+public class MacchininaFrizione implements GiocattoloMeccanico , Serializable {
     double prezzo;
     String marca;
     String descrizione;

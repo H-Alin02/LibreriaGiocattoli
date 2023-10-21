@@ -1,4 +1,6 @@
-public class PupazzoSnodabile implements GiocattoloMeccanico{
+import java.io.Serializable;
+
+public class PupazzoSnodabile implements GiocattoloMeccanico , Serializable {
     double prezzo;
     String marca;
     String descrizione;

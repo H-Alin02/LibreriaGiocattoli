@@ -1,4 +1,6 @@
-public class GiochiDiTavolo implements GiocattoloStatico{
+import java.io.Serializable;
+
+public class GiochiDiTavolo implements GiocattoloStatico , Serializable {
     double prezzo;
     String marca, descrizione, etaConsigliata;
     int numeroGiocatori;

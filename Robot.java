@@ -1,4 +1,6 @@
-public class Robot implements GiocattoloElettrico{
+import java.io.Serializable;
+
+public class Robot implements GiocattoloElettrico , Serializable {
     double prezzo;
     String marca;
     String descrizione;
