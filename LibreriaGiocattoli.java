@@ -180,7 +180,7 @@ public class LibreriaGiocattoli extends JFrame {
                         scrollPane.setPreferredSize(new Dimension(800,600));
 
                         frame.getContentPane().add(scrollPane);
-                        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                         frame.pack();
                         frame.setLocationRelativeTo(null);
                         frame.setVisible(true);
@@ -260,8 +260,9 @@ public class LibreriaGiocattoli extends JFrame {
             [7]  - Elimina un giocattolo Elettrocino                     |
                                                                          |
             [8] + Utilizza Set Merenda Frozen                            |
-            [9] + Utilizza Set Merenda Avengers                          |                         
+            [9] + Utilizza Set Merenda Avengers                          |                        
             [10] + Utilizza Set Merenda Ninja                            |
+            [11] Visualizza volantino Porta Merenda                      |
             [-1] ESCI X                                                  |
             (?) --->""");
     }
