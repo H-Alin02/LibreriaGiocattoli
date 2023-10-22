@@ -1,18 +1,18 @@
 public class FactorySetFrozen implements AbstractFactorySetMerenda{
     @Override
-    public AbstractPosatine setPosatine() {
+    public PosatineFrozen setPosatine() {
         return new PosatineFrozen();
     }
     @Override
-    public AbstractPortaMerenda setPortaMerenda() {
+    public PortaMerendaFrozen setPortaMerenda() {
         return new PortaMerendaFrozen();
     }
     @Override
-    public AbstractTovaglietta setTovaglietta() {
+    public TovagliettaFrozen setTovaglietta() {
         return new TovagliettaFrozen();
     }
     @Override
-    public AbstractBorraccia setBorraccia() {
-        return new BorracciFrozen();
+    public BorracciaFrozen setBorraccia() {
+        return new BorracciaFrozen();
     }
 }

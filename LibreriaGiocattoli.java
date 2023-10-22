@@ -1,7 +1,9 @@
+import javax.swing.*;
+import java.awt.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
-public class LibreriaGiocattoli {
+public class LibreriaGiocattoli extends JFrame {
     //Liste dei Giocattoli
     static ArrayList<GiocattoloMeccanico> ListaGiocattoliMeccanici = new ArrayList<>();
     static ArrayList<GiocattoloStatico> ListaGiocattoliStatici = new ArrayList<>();
@@ -19,6 +21,10 @@ public class LibreriaGiocattoli {
     static String nomeFileStatici = "giocattoliStatici.dat";
     static String nomeFileElettrici = "giocattoliElettrici.dat";
 
+    //Factory dei SetMerenda
+    static FactorySetFrozen f = new FactorySetFrozen();
+    static FactorySetAvengers a = new FactorySetAvengers();
+    static FactorySetNinja n = new FactorySetNinja();
     public static void main(String[] args) {
         getDataMeccanici();
         getDataStatici();
@@ -143,12 +149,51 @@ public class LibreriaGiocattoli {
                     ListaGiocattoliElettrici.remove(choice);
                     putDataElettrici();
                     break;
-                case -1 : break;
+                case 8 :
+                    SetMerendaFrozen setF = new SetMerendaFrozen(f.setPosatine(),f.setTovaglietta(),f.setPortaMerenda(), f.setBorraccia());
+                    setF.getPortaMerenda().apriPortaMerenda();
+                    setF.getTovaglietta().usaTovaglietta();
+                    setF.getPosatine().mangia();
+                    setF.getBorraccia().bevi();
+                    break;
+                case 9 :
+                    SetMerendaAvengers setA = new SetMerendaAvengers(a.setPosatine(),a.setTovaglietta(),a.setPortaMerenda(), a.setBorraccia());
+                    setA.getPortaMerenda().apriPortaMerenda();
+                    setA.getTovaglietta().usaTovaglietta();
+                    setA.getPosatine().mangia();
+                    setA.getBorraccia().bevi();
+                    break;
+                case 10 :
+                    SetMerendaNinja setN = new SetMerendaNinja(n.setPosatine(),n.setTovaglietta(),n.setPortaMerenda(), n.setBorraccia());
+                    setN.getPortaMerenda().apriPortaMerenda();
+                    setN.getTovaglietta().usaTovaglietta();
+                    setN.getPosatine().mangia();
+                    setN.getBorraccia().bevi();
+                    break;
+                case 11 :
+                    SwingUtilities.invokeLater(() -> {
+                        JFrame frame = new JFrame("Visualizzazione Immagine");
+                        JLabel imageLabel = new JLabel();
+                        ImageIcon imageIcon = new ImageIcon("volantino.png");
+                        imageLabel.setIcon(imageIcon);
+                        JScrollPane scrollPane = new JScrollPane(imageLabel);
+                        scrollPane.setPreferredSize(new Dimension(800,600));
+
+                        frame.getContentPane().add(scrollPane);
+                        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                        frame.pack();
+                        frame.setLocationRelativeTo(null);
+                        frame.setVisible(true);
+                    });
+                    break;
+                case -1 :
+                    break;
                 default:
                     System.out.println("Hai inserito il numero sbagliato !");
                     break;
             }
         }
+
     }
 
     private static void putDataMeccanici() {
@@ -213,6 +258,10 @@ public class LibreriaGiocattoli {
             [5]  - Elimina un giocattolo Meccanico                       |
             [6]  - Elimina un giocattolo Statico                         |
             [7]  - Elimina un giocattolo Elettrocino                     |
+                                                                         |
+            [8] + Utilizza Set Merenda Frozen                            |
+            [9] + Utilizza Set Merenda Avengers                          |                         
+            [10] + Utilizza Set Merenda Ninja                            |
             [-1] ESCI X                                                  |
             (?) --->""");
     }
