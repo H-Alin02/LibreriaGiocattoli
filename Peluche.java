@@ -23,6 +23,10 @@ public class Peluche implements GiocattoloStatico , Serializable {
     }
 
 
+    @Override
+    public void gioca() {
+        System.out.println("Stai giocando con un peluche !");
+    }
 
     @Override
     public void descrizioneStatic() {

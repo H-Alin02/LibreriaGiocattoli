@@ -21,6 +21,10 @@ public class Robot implements GiocattoloElettrico , Serializable {
     }
 
 
+    @Override
+    public void gioca() {
+        System.out.println("Stai giocando con un Robot !");
+    }
 
     @Override
     public void utilizzaPile() {

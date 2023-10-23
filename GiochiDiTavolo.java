@@ -25,6 +25,10 @@ public class GiochiDiTavolo implements GiocattoloStatico , Serializable {
     }
 
 
+    @Override
+    public void gioca() {
+        System.out.println("Stai giocando con un gioco da tavolo !");
+    }
 
     @Override
     public void descrizioneStatic() {

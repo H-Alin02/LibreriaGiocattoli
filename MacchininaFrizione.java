@@ -21,6 +21,10 @@ public class MacchininaFrizione implements GiocattoloMeccanico , Serializable {
     }
 
 
+    @Override
+    public void gioca() {
+        System.out.println("Stai giocando con una Macchinina a frizione !");
+    }
 
     @Override
     public void descrizioneMeccanico() {

@@ -16,6 +16,11 @@ public class LegoAdapter implements GiocattoloStatico , Serializable {
     }
 
     @Override
+    public void gioca() {
+        System.out.println("Stai giocando con i mattoncini Lego !");
+    }
+
+    @Override
     public void descrizioneStatic() {
         mattonciniLego.descizioneLego();
     }

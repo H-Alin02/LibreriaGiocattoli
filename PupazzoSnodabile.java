@@ -21,6 +21,10 @@ public class PupazzoSnodabile implements GiocattoloMeccanico , Serializable {
     }
 
 
+    @Override
+    public void gioca() {
+        System.out.println("Stai giocando con un pupazzo snodabile !");
+    }
 
     @Override
     public void descrizioneMeccanico() {

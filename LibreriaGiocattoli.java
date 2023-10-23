@@ -49,11 +49,13 @@ public class LibreriaGiocattoli extends JFrame {
                     if (choice == 1) {
                         giocattoloMeccanico = factory.creaGiocattoloMeccanico(1);
                         ListaGiocattoliMeccanici.add(giocattoloMeccanico);
+                        giocattoloMeccanico.gioca();
                         putDataMeccanici();
                     }
                     if (choice == 2) {
                         giocattoloMeccanico = factory.creaGiocattoloMeccanico(2);
                         ListaGiocattoliMeccanici.add(giocattoloMeccanico);
+                        giocattoloMeccanico.gioca();
                         putDataMeccanici();
                     }
                     break;
@@ -69,21 +71,25 @@ public class LibreriaGiocattoli extends JFrame {
                     if (choice == 1){
                         giocattoloStatico = factory.creaGiocattoloStatico(1);
                         ListaGiocattoliStatici.add(giocattoloStatico);
+                        giocattoloStatico.gioca();
                         putDataStatici();
                     }
                     if (choice == 2) {
                         giocattoloStatico = factory.creaGiocattoloStatico(2);
                         ListaGiocattoliStatici.add(giocattoloStatico);
+                        giocattoloStatico.gioca();
                         putDataStatici();
                     }
                     if (choice == 3){
                         giocattoloStatico = factory.creaGiocattoloStatico(3);
                         ListaGiocattoliStatici.add(giocattoloStatico);
+                        giocattoloStatico.gioca();
                         putDataStatici();
                     }
                     if(choice == 4){
                         giocattoloStatico = factory.creaGiocattoloStatico(4);
                         ListaGiocattoliStatici.add(giocattoloStatico);
+                        giocattoloStatico.gioca();
                         putDataStatici();
                     }
                     break;
@@ -97,11 +103,13 @@ public class LibreriaGiocattoli extends JFrame {
                     if (choice == 1){
                         giocattoloElettrico = factory.creaGiocattoloElettrico(1);
                         ListaGiocattoliElettrici.add(giocattoloElettrico);
+                        giocattoloElettrico.gioca();
                         putDataElettrici();
                     }
                     if (choice == 2){
                         giocattoloElettrico = factory.creaGiocattoloElettrico(2);
                         ListaGiocattoliElettrici.add(giocattoloElettrico);
+                        giocattoloElettrico.gioca();
                         putDataElettrici();
                     }
                     break;

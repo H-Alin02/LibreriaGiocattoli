@@ -21,6 +21,10 @@ public class MacchininaTelecomandata implements GiocattoloElettrico , Serializab
     }
 
 
+    @Override
+    public void gioca() {
+        System.out.println("Stai giocando con una macchinina telecomandata !");
+    }
 
     @Override
     public void utilizzaPile() {
